@@ -5,5 +5,12 @@ void setup() {
 }
 
 void draw() {
-  drawX(width/3, height/3, (width*2)/3, (height*2)/3,(width*2)/3, height/3, width/3, (height*2)/3);
+  //game loop
+  //
+  if (!gameOver) {
+    if (!playerTurn) {
+      computerPlays();
+      playerTurn = true;
+    }
+  }
 }

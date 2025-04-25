@@ -18,13 +18,23 @@ void xLocation(int index) {
   int row = index % 3;
   int col = index/3;
   drawX((width*row)/3, (height*col)/3, (width*(row+1))/3, (height*(col+1))/3, (width*(row+1))/3, (height*col)/3, (width*row)/3, (height*(col+1))/3);
+  
+  board[index] = 'X';
+
 }
 
 void oLocation(int index) {
   int row = index % 3;
   int col = index/3;
   drawO((width + ((row*2)*width))/6, (height+((col*2)*height))/6);
+  
+  board[index] = 'O';
 }
+
+
+  
+  
+  
 
 
   
