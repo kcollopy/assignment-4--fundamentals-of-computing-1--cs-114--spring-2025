@@ -13,5 +13,13 @@ boolean isTaken(int index) {
     {0,4,8}, {2,4,6}
   };
 //boolean for check winning moves
+boolean checkWinnning(char player) {
+  for(i = 0; i <= winningMoves.length; i++) {
+    int[] combo = winningMoves[i];
+  }
+  if(board[combo[0]] == player && board[combo[1]] == player && board[combo[2]]){
+    return true;
+  }else{
+    return false;
 
 //boolean for finiding winning moves
