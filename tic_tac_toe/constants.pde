@@ -23,3 +23,33 @@ boolean checkWinnning(char player) {
     return false;
 
 //boolean for finiding winning moves
+boolean findingWinningMoves(char player) {
+  for(i = 0; i < winningMoves.length; i++) {
+    int first = winningMoves[i][1];
+    int second = winningMoves[i][2];
+    int third = winningMoves[i][3];
+    
+    playerMark == 0;
+    emptyspot == -1;
+    
+    if(board[first] == player) {
+      playerMarks++;
+    } else if(board[first] == '/0') {
+      emptySpot = first;
+    }
+    if(board[second] == player) {
+      playerMarks++;
+    } else if (board[second] == '/0') {
+      emptySpot = second;
+    }
+    if(board[third] == player) {
+      playerMarks++;
+    } else if(board[third] == '/0') {
+      emptySpot = third;
+    }
+    if(playerMarks == 2 && emptySpot = -1) {
+      return emptySpot;
+    } else {
+      return -1;
+  }
+}

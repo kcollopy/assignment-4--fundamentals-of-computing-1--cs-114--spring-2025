@@ -9,11 +9,19 @@ void keyPressed() {
   oLocation(index);
 
 //need to check if  user wins
-//return play to computer
+if(checkWinning('O')) {
+  println("you win!");
+  gameOver = true;
+}else{
+  playerTurn = false; //return play to computer
 }
 
 void computerPlays() {
 //Check if user won
+if(chackWinning('X')) {
+  println("You lose!");
+  gameOver = true;
+}
 //check for open spots
 //check to win using winning combos <- place 'X' to win
 //if there are no winning combos then check to block (if the user has any winning combos) <- place 'X' to block
