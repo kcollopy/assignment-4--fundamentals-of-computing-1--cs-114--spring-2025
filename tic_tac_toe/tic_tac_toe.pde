@@ -13,4 +13,11 @@ void draw() {
       playerTurn = true;
     }
   }
+    for (int i = 0; i < board.length; i++) {
+    if (board[i] == 'X') {
+      xLocation(i);
+    } else if (board[i] == 'O') {
+      oLocation(i);
+    }
+  }
 }
