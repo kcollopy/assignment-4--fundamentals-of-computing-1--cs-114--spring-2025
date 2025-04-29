@@ -13,7 +13,7 @@ void draw() {
   }
   if (isTaken(0) && isTaken(1) && isTaken(2) && isTaken(3) && isTaken(4) && isTaken(5) && isTaken(6) && isTaken(7) && isTaken(8) && !boardFull) {
     println("It is a tie! No one wins!");
-    boardFull = true;
     gameOver = true;
+    boardFull = true;
   }
 }

@@ -48,7 +48,7 @@ void keyPressed() {
   if(!gameOver){
     //Will not let user pick a spot that is already taken
     if (index < 0 || index > 8 || isTaken(index)) {
-      println("Invalid or taken spot");
+      println("Invalid key or taken spot");
       return;
     }
     
@@ -82,7 +82,7 @@ void computerPlays() {
     return;
     }
    
-  //If the computer does not have a winning move or cannot block, moving to a spot starting with the middle, then corners, then middles, depending on what is taken
+  //If the computer does not have a winning move or cannot block, moving to a spot starting with the middle, then corners, then middles, depending on what spot is taken
   int[] priorityMove = {4, 0, 2, 6, 8, 1, 3, 5, 7};
   for( int i = 0; i < priorityMove.length; i++){
     if(!isTaken(priorityMove[i])) {

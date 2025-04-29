@@ -19,6 +19,7 @@ void xLocation(int index) {
   int col = index/3;
   drawX((width*row)/3, (height*col)/3, (width*(row+1))/3, (height*(col+1))/3, (width*(row+1))/3, (height*col)/3, (width*row)/3, (height*(col+1))/3);
   
+  //To keep track of where 'X' is on the board
   board[index] = 'X';
 
 }
@@ -28,6 +29,7 @@ void oLocation(int index) {
   int col = index/3;
   drawO((width + ((row*2)*width))/6, (height+((col*2)*height))/6);
   
+  //To keep track of where 'O' is on the board
   board[index] = 'O';
 }
 
