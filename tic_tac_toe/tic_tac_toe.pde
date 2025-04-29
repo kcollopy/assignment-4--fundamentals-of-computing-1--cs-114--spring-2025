@@ -5,19 +5,15 @@ void setup() {
 }
 
 void draw() {
-  //game loop
-  //
   if (!gameOver) {
     if (!playerTurn) {
       computerPlays();
       playerTurn = true;
     }
   }
-    for (int i = 0; i < board.length; i++) {
-    if (board[i] == 'X') {
-      xLocation(i);
-    } else if (board[i] == 'O') {
-      oLocation(i);
-    }
+  if (isTaken(0) && isTaken(1) && isTaken(2) && isTaken(3) && isTaken(4) && isTaken(5) && isTaken(6) && isTaken(7) && isTaken(8) && !boardFull) {
+    println("It is a tie! No one wins!");
+    boardFull = true;
+    gameOver = true;
   }
 }
